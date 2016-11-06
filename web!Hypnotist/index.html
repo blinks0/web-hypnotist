@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Web-Hypnotist</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body bgcolor="#0481c9">
+  <div id="doc">
+  <a name="top"></a>
+  <center><img src="/images/transparent.png" id="imageID"></center>
+  <br>
+  
+  <td><nobr> <!-- <td><norb> prevents linebreaks. Apparently not standard though. -->
+  <span class="titletext">web!Hypnotist</span><span class="smallshadowtext"> (beta)</span>
+  </nobr></td>
+  
+  <br>
+<td><nobr>
+  <a href="#" id="playB" class="myButton2">Play</a>
+  <a href="#" id="stopB" class="myButton2">Stop</a>
+  <a href="#" id="clearB" class="myButton2" >Clear script</a>
+  <a href="#" id="downloadB" class="myButton2">Download script</a>
+  <a href="#" id="openB" class="myButton2">Open local file</a>
+  <a href="#" id="shareB" class="myButton2">Share script</a>
+  <a href="#" id="manualB" class="myButton2" >How to use?</a>
+  <a href="#" id="examplesB" class="myButton2" >Examples</a>
+</nobr></td>
+  
+  <input type="file" id="files" hidden />
+   <output id="list"></output>
+
+  <br>
+  <td><nobr>
+  <textarea class="mytextarea" cols="80" id="mainTextArea" style="font-family: 'Courier New'; margin: 2px; font-size: 12px; height: 500px" >
+%DEMO-SCRIPT
+%THIS IS A DEMO SCRIPT! ERASE IF YOU WANT TO WRITE YOUR OWN!
+%First line will be filename upon save
+%
+%CLICK PLAY TO TRY!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Welcome to web-Hypnotist.
+This is a web-app made to generate a hypnosis session, featuring speech, graphics, music and sound effects, from a written script.
+
+So... Let's test this! This is a script! What is written in the large text-area will be spoken.
+You can also include commands in the text, which will not be spoken but do other things.
+Example-scripts are found at the bottom of the "How to use?"-page.
+
+Commands begin with !(exclamation mark).  Comments begin with %
+%this should not be spoken, it's a comment
+
+Now let's test a pause 1.57 seconds. Here the pause command is used.
+!pause 1.57
+I hope it worked.
+
+A row left blank will be a pause for half a second.
+
+
+Now test a sound effect. This is a finger-snap
+!sound snap
+
+
+That was the sound-command.
+
+!gender m
+I can change between a male and female voice with the gender-command.
+
+Let's try an image from a url. This is the urlimage command.
+!urlimage https://upload.wikimedia.org/wikipedia/commons/6/69/Spiral_mathmap.gif
+!gender f
+May take some time to buffer image, especially if it's a large file.
+
+Speech will continue while buffering image.
+
+
+We can make the image larger with the imagesize-command.
+!imagesize 900
+
+
+
+Or smaller...
+!imagesize 100
+
+
+This should be about right.
+!imagesize 600
+
+The bgcolor-command changes the background color!
+!bgcolor yellow
+
+Maybe another color
+!bgcolor black
+There! Looks great! Now we can do some hypnotizing!
+
+I can change speech-volume with the volume-command.
+
+!volume 0.5
+This is spoken more silently due to the volume-command being used.
+
+!volume 1.1
+This a bit louder...
+
+!volume 1
+I can change speech-rate
+
+!rate 0.6
+Talk more slowly now... slow... 
+!rate 0.4
+Slowing down...
+
+
+!rate 1.6
+I talk fast! Fast! I talk so much fast!
+!rate 1
+
+
+Let's try some music
+!youtubemusic https://www.youtube.com/watch?v=6GdP31jXyEY
+May take some time to buffer... it's streamed from somewhere after all...
+
+
+
+
+Ahh... music...
+!rate 0.7
+Everybody likes music...
+
+
+Relax...
+!youtubemusicvolume 0.4
+
+Let go...
+
+
+!imagesize 800
+!sound sigh
+
+
+Sleep....
+
+
+
+!rate 1
+Well...  this is about it so far...
+
+!youtubemusic off
+!noimage
+
+So...   go ahead! Write something and share it!
+
+Make us proud!
+
+
+Oh... and one more thing...
+
+It's a good idea to use Google Chrome here! Most features will probably work on Safari as well, but other browsers seem to lack the speech-synthesis-engine!
+
+
+
+
+</textarea>
+  <textarea class="mytextarea" readonly cols="40" id="outputTextArea" style="font-family: 'Courier New'; height: 500px"">
+-------------------------
+ This is the output-area 
+-------------------------
+  </textarea>
+  </nobr></td>
+  <br>
+  <input hidden="true" class="roundedcornerInputField" size="80" type="text" id="inputField" style="font-family: 'Courier New'; margin: 2px; font-size: 12px;" value="test commands here">
+ 
+  <a href="mailto:admin@webhypnotist.x10host.com" style="text-decoration:none"> 
+    <font class="smallshadowtext">&copy admin </font>
+    </a>
+ 
+
+  <div id="musicYT"></div>
+  <br>
+
+<script type="text/javascript" src="js/musicPlayerYoutubeScript.js"></script>
+<script type="text/javascript" src="js/lz-string.js"></script>
+<script type="text/javascript" src="js/FileSaver.js"></script>
+<script type="text/javascript" src="js/regularFunctions.js"></script>
+<script type="text/javascript" src="js/speaker.js"></script>
+<script type="text/javascript" src="js/handleCommands.js"></script>
+<script type="text/javascript" src="js/loadFileScript.js"></script>
+
+<br>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10653548; 
+var sc_invisible=1; 
+var sc_security="2652797a"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10653548/0/2652797a/1/"
+alt="web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+<!-- AdSense code -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- WebHyp1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2790944600208530"
+     data-ad-slot="3086234601"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Adsense end -->
+
+  </div>>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Manual</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body bgcolor="#0481c9" link="white" vlink="white" alink="white">
+  <div id="doc">
+    <p><font class="titletextsmaller">web!Hypnotist Manual</font> </p>
+    <font color="white"> <br>
+This is your virtual hypnosis web-app, which uses a simple script to generate a hypnosis-session with both speech, audio and visuals.<br>
+<br>
+The language basically uses the following commands:<br>
+<br>
+
+<font class="evensmallertitle"> To play the script:</font> <br>
+<br>
+Click the ”Play”-button to play the script in the text-area. To play part of the script for testing you can highlight part of the text and click play. Then only the highlighted part will play. <br>
+<br>
+<font class="evensmallertitle">Making a script:</font><br>
+<br>
+Text in the text-area will be spoken. But you can by inserting commands into the text change voice, speech rate and volume, view images, play music and sound effects among other things.<br>
+<br>
+Example scripts are located at the bottom of this document.<br>
+<br>
+<font class="evensmallertitle">The language basically uses the following commands:</font><br>
+<br>
+<font class="evensmallertitle">To speak lines:</font><br>
+<br>
+Just write a line and it will be spoken as the script plays<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace">This line will be spoken.</font><br>
+<br>
+<br>
+<font class="evensmallertitle">To comments:</font><br>
+<br>
+A line that begins by a %-sign will be skipped. Hence you can make comments in your scrip.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> This line will be spoken. <br>
+%This line will be ignored </font> <br>
+<br>
+<font class="evensmallertitle">Commands:</font><br>
+<br>
+To make Speaker do things other than just speaking and not speaking we have one rule. A who’s first letter is a !-sign will be interpreted as a command. <font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace">!examplecommand input</font><br>
+<br>
+Make sure there is only one blank space between command and input. Examples will follow later.<br>
+<br>
+<br>
+<font class="evensmallertitle">To make a pause:</font><br>
+<br>
+The lines will be spoken one after another. If there is a blank space between two lines there will be a pause of 0.5 seconds between them.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> This line will be spoken.<br>
+After a 0.5 second pause this will be spoken. </font> <br>
+<br>
+Another way to make a pause is to use the !pause command<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !pause t </font><br>
+<br>
+Will pause for t seconds, where t is any number. For example:<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> This line will be spoken.<br>
+!pause 4.23<br>
+After a 4.23 second pause this will be spoken.<br>
+</font> <br>
+<br>
+<br>
+<font class="evensmallertitle">To change the speakers talking speed:</font><br>
+<br>
+To change the rate of words per minute we use the !rate command. The !speed command does the same thing.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !rate 0.6<br>
+This line will be spoken at rate 0.6. It’s slower than standard.<br>
+<br>
+!rate 1<br>
+This line will be spoken at the standard rate. </font> <br>
+<br>
+<br>
+<font class="evensmallertitle">To change the speakers volume:</font><br>
+<br>
+Changing the speech-volume is done by the !volume command. A volume of 1 is the standard volume . <br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !volume 0.5
+This line will be spoken more quiet.
+ 
+!volume 1.3
+This line will be spoken more loudly.
+ 
+!volume 1
+This line will be spoken with the standard volume.
+ 
+!volume 0
+This line will not be heard at all. </font> <br>
+<br>
+<font class="evensmallertitle">To change the speakers gender:</font><br>
+<br>
+You can change between a male and female speaker with the !gender command<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !gender f<br>
+This line will be spoken by a female voice.<br>
+<br>
+!gender m<br>
+This line will be spoken by a male voice.<br>
+<br>
+!gender female<br>
+This line will be spoken by a female voice again.<br>
+</font> <br>
+<br>
+<font class="evensmallertitle">To play sound effects:</font><br>
+<br>
+Sound effects are played with the !sound command<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !sound snap<br>
+<br>
+</font> Will make the sound of a finger snapping. <br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !sound heart<br>
+<br>
+</font> Will make the sound of a heartbeat. See the full list of available sounds at the bottom of this document.<br>
+<br>
+<br>
+<font class="evensmallertitle">To play music from YouTube:</font><br>
+<br>
+You can play music from a YouTube-link with the !youtubemusic command.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !youtubemusic https://www.youtube.com/watch?v=6GdP31jXyEY<br>
+Now you can hear the sound of the YouTube video specified. <br>
+<br>
+!youtubemusic https://www.youtube.com/watch?v=Cnfj6QCGLyA<br>
+Now another YouTube video is playing.<br>
+<br>
+!youtubemusicvolume 0.5<br>
+The YouTube-music is now playing at 50% volume.<br>
+<br>
+!youtubemusic off<br>
+Now there is no music playing.<br>
+<br>
+</font> Make sure you use the full youtube adress and not the shortened one.<br>
+<br>
+<font class="evensmallertitle">To show an image or animation:</font><br>
+<br>
+Images is handled with the !urlimage command. <br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !urlimage http://www.example.com/imagefile.gif<br>
+Now the image from the given url will be shown. If it is an animated image it will show as such.<br>
+<br>
+</font> Remember that larger images will take longer before they show.<br>
+<br>
+To change the size of the image we use the !imagesize command.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !imagesize 300<br>
+Now the image will have the height 300 pixels<br>
+<br>
+<br>
+</font> <font class="evensmallertitle">To change background-color:</font><br>
+<br>
+Sometimes you may want to change the page’s background-color in order to match your image better. This is done with the !bgcolor command.<br>
+<br>
+<font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace"> !bgcolor black<br>
+Now the page will have a black background<br>
+<br>
+!bgcolor #3f5c93<br>
+Hex codes work as well. This would be the standard blue background.<br>
+<br>
+</font> The color is always reset after a script has stopped.<br>
+<br>
+<br>
+<font class="evensmallertitle">To share a script:</font><br>
+<br>
+Click the ”Share Script”-button and a window with a link to your script will open. It will be extremely long, maybe even to long to copy-paste into a Google-Chrome window. Clicking on it as a link should work as well I think. You can use an url-shortener to make it shorter. <br>
+<br>
+You can also download the script as a .txt-file to your own computer for safekeeping. Just click the download-button.<br>
+<br>
+<font class="evensmallertitle">Sound-effects avalible:</font><br>
+<br>
+The possible sounds to play with the !sound-command are <font face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace">
+<ul>
+  <li>snap</li>
+  <li>ding</li>
+  <li>bong</li>
+  <li>sigh</li>
+  <li>outdoorfootsteps</li>
+  <li>heart</li>
+  <li>heels</li>
+  <li>giggle</li>
+  <li>slap</li>
+  <li>glasscrash</li>
+</ul>
+</font> <br>
+<br>
+<br>
+<br>
+<a name="examples"></a> <font color="white" size="6" face="Arial Black" class="titletextsmaller">Example scripts:</font> <br>
+<br>
+<font color="white" size="4" face="Arial Black"> <a href="index.html?KQJQogMgggGgtAETAWQPIChhe19BCAcwFMA7AEyICcACAMyIFsBDAGyPwE8B7AVwBceAI0Y8AzgEsAxtQAWfPgAdRALgD0qgO5aAdN35Ci2yVwaamfSTID8ANwC8AFQDWAMQYBGAFYMAUowCq+DyULOLMxLLySmqqonAMRGTiTHCSTJZEcExOAAzaCuIkYQRGJqpclOIEhayiqkwAbKoAHJKqkgBM9Q2tnbS0gg1MAKwdHe4dkgDsOQAsswDMRLSzAJxMHavDU6va1bT4ggTGLBXUgizpTvhhTMQSAF5E1A0z6OgA6kQsxgl47+gAJJ8QCYBKJqHwws9aGc9BCuNRKN8mAAPbTvPCUczPPKrdAAZQR4lo1DhTCR1CKkmeTHI1F+MMofCYFyIABpqLSyKTeCCKUimGQOPDqMQ+NRRMymYkOZ4xOLmU4aZSpM9BAK+DJqIVtNQAUQUTJWM9NeZzhqtVzOeC4WQEZJTqJnnoaEQOERwXaNCRAGQEevecslnJYpw0POCTpYJJIXDDfARSMuKOoDAqNLpqaRfoBwjSYhNMmeVI9CpkhQInMEvHFMg4ChjEnB4nBpvFGi45CotB4LDoRG+5eoXBJClrEjSvatCRIzN7idR5nEHYhRvFaRIlNjEoUAu5msovAIMmr4ddM-EFKrQuz71zTHzdAPDBXzZTJlI4sKEKh6PQmqoRBgpumrlr+MYgSQFbDtqDAKBUzIkNSdCwrwIp2tQBrUgoCoJsiKJ+qOHDjqwLDClOH4kcKmbpty1G-ugVq0sKMaUMwvbVhIFCbs2HrUBo4ghsBGH9EQkjimcSSSsEgjhtqG5MXxTAcL+X60Ok4oKSxbFDvwnFFlwPHgvxgnqTwlGyN8CicnSBA8OIXFwvGfbfNZe4IsIb4UlOab0qwDB+tRrmec884ook9FWv+Q4kKREq8HScIxmGSLMF+hR8ABkqJHJ2otoWcU8HS0EMMKNgGdS9FRaI8XcsVpXlc864WSwVlWk1tn2c6qFOfQLmRe5zyBd5FITgw6JDRmPmheFAJWl+TB9mGqbTnw4KAiCz4EAZkEisYhXirQT7UO4OTUF6G5Oe4N4MXS-Gahh6SWnSRA2FQzE8Awwg0K29LxQdR0nWdsYXQiV3+ugRCPUFL1vdQCjkuJJJ6H6MOUFRYgOkQKOvWjlJUK9fpWqjwq0OI6rPF+LrnFwQp8QJvYSLBsWhcFQXUdd1XnMKUWQgkK5moCopEDhx3atGXDitVHZULJxm9r1vahEq4YAOSvUDQhsHuZZGR2FCUN2isw+xJKhYuHbXZFOt8XrXY9tQbCvSbcNjlIrCE3SIG652Bv247LnFRRc54ebG5yyupDRbFBAHmGVq5u+Ep8AekEy1akop8QlA+gCmLYtQeTNOgd75hy0tDiSUXFkGEEEOCLInmbkLLq+-4Us2JAqxp5xME6K0V4iIfNyQAbynxhYbnCzAk-2vY-XoashZDGTclTgi94wH4D03S4kBycJNVLG6ScYOP8+KB+0mdlS0OKFBEAoad0vfj+UL+CD9q-QUv1QALvKFKIUS5yxBlAu2gGjoAAcmH+lA-551AYXdAnMTo5xutyBa7YfaG2cqESCN4MG219r2DQTB1bQV+AoNgoCd7LiSopUQhZwRcDPsjf0xMUwYzYKIbGsMSD4yxv6ImOMSZk3bpPXgNArwzwHDteOokTCDgmrRKaeFEg3ipgwQo3IFaDjkb8Qco0n7ckMdnP+qxUFkBvpCHaMDv6fxltNMgN52Hk3MFqOEBojRsGagUWRNk7JJB2o5BECsgpOQ8ko1mo0byRMCo41B7xmioKtHQqKDBOG8UphI6mtNDomAjtQYR8IrLQSpoWQUN5zoijSRkpsF18qQiUAPKm8YPTOKKek0QmMcprxpsxLc01wSxLTPRdAUwOSMTyoNWpPTslSN+ueEgPATS4STKzYaAj3gaK0eceRCR650gVuCExQUTEJLQS8c5Vptl0muXMvpCzrHLJFKE4Z-JVFOP9G8xqflznDAsVYwctirS2PiTg3RdIE6aJ2ictqfkqAJNmB7bk4gFSUB7NIlg4Ito0xFKFP0TkWaEWIiGDgBLVmohTEHWK3zknglmNfYkq05JOScgsZJCVUKWKZRhV6x97E0DBbCukZyAQLD-h0VBOido4s+U4JKg556oXJEvJMoF3jSorLK6g8rYyKtXLy2Grj7oeMNMaXKPiIUouxQEwcwScFhIGusya7ykwzXQN83yLAGB-ytO4P+SC2AP3wNVQq3JRAkCYAoANogg3RrwKGukEao0BouXk58Xs3z92XH-FxFpZKePNYGcUgzZK0vBu8PNkMTWoULd4wsLUDncg6hQG03UETctvmdAVdiH4OI+Vcuk81FpZo-GtDaoptoVicqIJSBT2yUCcf-PC5yLnLyetydhvMCwCyBufZxUMhGw23efaggtZ3c3ygupdkCV0BvYZ0zGPDcZ8MoK9X8R7cak3JrM4IOThTh0ZpQzFQUoWDR8hswebqyC-nXdDIpJ7z1zqitem8+K-43O5IBsIlC1R7J+d6oxXqEjZzYQhqEZ6JTIavRUG96GASorpoJUJStlSYP1tgkhZDTZD13hKHDsUSEMN4swmWVMPwXjVH01B9H3iMRtlg+2mqB6jT4aIUQcmFMcaU7PQc5CTC4eobx5cQnGFDhYbwStHSMnPuYvw5Fhqv2iIpuIv98zQqKIgy69gcnnrkb5khy9zxUPLqTOczNyn9NM2Fqqhcw93gRd0ztchfk1PYtjuCDOHYs5BSy6nGgjJwx-1k759B4Lks8aTKHbcu5wTpoKfGEpSNsnlO5FU-ch4tQ1K6Vw39NA+GSCcLqBjksdyQzIJ6YGLKERUwYbwFg+tuEAna7GckE3TznFVEoBJK2SGLrbX+xkkNWJLfeCtgpj7etZL-Uacg3DwYLUi5VuLfHRBjcFC2BE3XMZ1I26TfLp2Lk-Se1Bl7y43u1aBt6DbGRJSVKmx1ngR4Tzfau65yRVw-TtZkAeJHlpBKo8yejpOJhHpY4R-lS7RONtlm21Z2G8MmTNNrSQTwXAOD6tfOxu2xDSHPGgjQ+STZRuQ+7EyQsNAqm9OvFD4nbA64iipvK-s92AQtLLEeDhPW2kXZmV+KK69Bsbfl6rytrP2ec+9tp+WSWoLPZRNV3u2oRfjbq8ENusuNtSJ2wjmb2TaROC4X6KmE5XrHIM1Q74wowVO+B7b7exmNzGEWcsyb0OnJU16nwa68Y9vraiuRpppTsmtMBxDaz2u+v-udco11qJspJUtoc+PnqwVboo4F+dtGEmyZK8XUS94nQckY0cydNM-SMeThinB2KuC4vjDJu9GIQE4nARcskghqosH4FHjC5vL1c8IdgkHgv2kM4Rszngv1osZVitEsj5+mfF6vxQyPzMB2CIOf01irAdKrU6txE6HVoKPzv0NNgUpJAhNSDeC2nalyj2iCj2ulF9tbNzkQjeJmrhr3LSCWnhIOJKPnNBMSm7JOBmEHKDg7sPAkvAiFPnHkFMBcsOvQEtO+DOGtJyJtFOrtH9I+Pku4CKIDJ+u9J9DLD9ILHtDOLwc+PwZdDkDeOHA2lZPaqEv1LsjXlEr8l8l5rXrFmFJ8uwksiITQLAUEu2g6sKsYvCqRu8K3gOn-IYV9MdAkg+hklXt7o5nZm+jRB4XQM5o8oUHZDtISnhOoezAGg4TLJKgCIljInbhQaHAStbCDqph6JNprIOF+BnKQAQJqH6GKNYhWHljlunMnNljLIVsjAGjQWAkXBETQOytETjv2N+PsqzI4puBoAFNoRod6ljoCjtDDPyn2jQIgcMaunUdQEigCDCH+tukMiotBoTJvlwNvrfsKKQGzhzkEdbAQaAgLonijPvpblpjzknIQSSCkepuMR9I4f8stggc-D2pKPTH6BYcRgiuETcTLA0AkhIMmHMd2sMRQQ3rGDwknlYX0UykCg8W1j2vEp8UYdQFMAkiyFvjvrFBsRbtsYfopjbrESpqlqkUsWiWsXvpsccWgdgrsaAfEVQQiY4UkvqFUHIC0bxHEh-kQMyQqFCMclYachCVUSvmAgwRMeYvcUCaMV-M8SGK8XyXCoRqRoMW0R-m1B2E8oqhSsmJ6ndFqFWm4gWmamwNcYiSgn-BlBdDyYCV-GCuaaybyQqfyQqQ5snuqUER2lYlaf2osf6C6QERqQ6p6qNHTPdHqTWlfnWljACLJlbGaJSfbFxjSYLpyAQEwF+MWvQmZqJjQKwgYfZuwt+lmD4VTm4Q8qiSseidHh-m8aKqFqiD3kvqmu8EAA" style="text-decoration:none"> Relaxation script </a> <br>
+<a href="index.html?KQAgogGgggsgCgGTCAygYQEoEk4BVgBQwxJpZxBAhAJ4D2ArgC70BGApgLb0DOAlgMYgAFo0YAHbgC4A9NIDuCgHR0mrNov60O8gIaN+QgPwA3ALwAPAEwArODF4wAqowBiARSoBzNgDsAJmwATiAAZpw6ADZsVPSBEbwcOt7CohIy0hxsfrw6ip68YkLUGloZWTnS-Gi0-C4A8sYA6o0AagCOdVDS+YXF+SFULJ6aEbTBLBE6-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-hI7Eco+l-yzIdCfEnqZucB2sMFdw3agjDnVi1TrNxMI+60lTiWuUgzgQ9kokyK+caBFNnkl1FMWtXFfJZbI8LMciTfCeA-JRmbrVElti6Zs7WgrFlPUeR2-tqtsNyhB5OSUtEN4kgzswah15r54LTL5kb2lNng34AycoPtsM0IUaiEKHk-CCj-ZTFjC5LTs8-DoFgvNCeLD0QyJaRdPhjOJQzxYMqMDTjwyLLiQUXWfBXDOrV35ulc3+MGb4pDIj0FWFyPwrwzR5T4NDH2tHMtZkJSHGVCADOE3VG8ZgYJUR1fkewU0lHEvSj0LEd4h2xTql9x00Ya0fYffTbT+XYgq4Ygd8mJ3-a3z7WRuUoKU7Cf3DD7jJXkRLsc4IlzmNT0ozlWTWIW0i5sTXPuGwPsgYbgw0Y2wC1Yw5QOrr9ZLNqxJ5jACIQvelTTT0ymAyZP5SY8i04LjOoD4pja71-45l042pzhI2jRMkHla3G4CEU1D4ueawOnorITIJvQYHF0uT194Ox03KXBERdKf2-o69ghZjaQBAaK0RJifC4KLAXrURr6d60jsA97hS0j94ppFxD64y7DACNC8SJSBBEAkCxKOS3D4jl7aSnRRaQSqhozBiy42o24JarwKh6QHjcoiTpa5IzDCI84MFJasjCK7BK55jlbu4pitZjxEF65MHlxegpaRwg6ZqsK4wjhyhYA9jnjoJ3JvRLyGynot6QZeqVQcH+xihKGKIHZFQABELge60+sCigphRYLiJGz85k2Iuh6gtIDobA1A4uti7A7iTygepMyqPh-cVhcicoqqPsuwSMyktI6in0r45Imq2qco6kuMUAY8zwMsqBdQjctIUkCI7BHIURBRzanwKgPYB45IXus6Ps5UDowRMCciEYL29wq2ngOg6mrouAcg3OHIe2UEAYWYcEUYk8E0U02UB+aE6YNWpU-h2kT+WiQQwRnwD+nRQgRsYRJSz4hib4rhHIQe4RZoTMYQNwrOx2I0HIcARQRwYeU8ix82Gme4NxRx9xtIxqM6NxUR5SmISmQWBA2RASPg9AHACaAMsQtBD4Hh4uY2Ohk2GiRc0wJEZo0ERcHI-xZcEY5gPIgJwJSUWA-CS8cokJ8QlON4vgYRlhnwsi4ytIBxXMEQ0RHIsR1IMRfc6iSRLJeYzJHIq0LwYwg05JY8d4WBngxQw4QJIJROcoWk5RqwSxDRF8so4AnhxJP4fhIAuAmBgYr0Wo2yzkZkQgYRyq9AlYDoEQQUng-+mEkkkO+gBpqxBo5w-0DqPA0hbALACKd6BKx+jABAQAA" style="text-decoration:none"> Standard Hypnosis example </a> <br>
+<a href="index.html?KQOQ8gKgEgkiDiACAogDQIIFkAKAZZwAUMCaWSYQIQDmApgHYAmtATogGZUsCGALrYgAMAOgAcVAK4sANgEsAttzqIAFr14AHAM4AuAPR72sptO4BPRgHt69bvWFHptLcIDullow0tnLgMaW8noATIIAjAAsemHBeloasjzSwtSynJQARtQB0h6IGaZ+ANZUCkrOsgBeAgDsgoJUZpYSvBIZtPISWrJ+qura+nquw8JNLW20wgFBrnx+KgD8AG4AvLhQAEIAjgCsuADCAKpbAMwAioSXIJauHLS00ohjLFoP7Pm00wK8rj0C3FpED5TAAPWiMYSQxA-P6IAGIZi0DSQ4SIABWXV4iCcWOolhRl0IMEQs3oWLGiHoN2hlkQZVS9G+Kj4T2acJ8iC0vDsjGM1Dp9A4LGsWMs724qmarwJEBUskB8rhgok9C6Em4jxUUsmkMJMF4AHJAT8HksBOx7li5dQVCjoa5TebLSTZMw7bw5SxeGYALTdEF3WhY3L0agEy6y1j-DkenwCYWBFxQ6wCdpypjQlQCSwe1jhwjoDMexVclgSPytDlcnmAyxmtgSjIAjoMXj5yMc7gxlRxzn8bSZllObiMRASDQ0zMCLVdHWovUkuzktm8WmzaRFMcTnmISwaBhToUihGWDz59CAilWAA0rIkfaRAtXh6MLyxCfk+f1RrhiHrZjHVUtHVR4Pw+PxuFnKcOUVaxpAAlNEAST5s3edgpHoWRKwEYxDw-O0JUuHw-DkTDQ0QeZuEScNIwort914Pl3SzRdpGkJNUVzCjaFkUiwyhHcuPHLV2P4FgEMFLjKMSdl-jY392kgxj0MeYCbAAswHlyVx2zlBVjRYgBNLTqQAJVPT9dQjFjpLYXJLCKQEtFpYwliwvlB2Xe9103OtWEnLC7W6LErFcQVcMCgSMw0LoVDpLEm2KJ9aQlYjSI8jRLGC2RrHzQy2QtB5OVpYFuDBCEotHeEr3xKEKRxO82HkYxR0YFg0ixZ8JQ0YctCXRBaBBfd2oYPxUMPDQAU6z1vQRcwOMJdAkN6-rBuG2RRvGrjJq5TNElmxh5sJY6uD4AQRBqAsMypW4PRZeQOg8ACINnS8V1pQrHloM1BXkDx4weMrwXzSgeH4IQxEIDYWnin9GIeyc6Cxccj3kQ9bKVUc-rNXdJNpLjXgCDMrA8WYAJ3LlH2Mbo3V1WVFTAxUNT+3bXVbHoNUnLjXy5O1BrGjRpoEHI8kVPFpAq4RCHp-TD3gSwJaBCyCKLLMYIMlk0uMDyMdwqTW38sU8OV3UAGVjDGxqBqG1gNvoS3Zic2k8UsUducSXb4bnO9WM3Z87vfT50vIjGlCo+woWCk8woFeKVdHG6fYxXbh0FRKihBsHzuES6Lx9qw7QpDJ2vI4xn2eRBmtVgQHr+8Td3FP9WAAnraABVabZG+2tpYnbOodaQcb+skVA4iapqeNuWDtE7TvBkRxHQeT2ptNsoSwuGFG+Z2gy3VHPIo5lqMqn3sZwsl8ZY4tPCVwIZT0ukDIEDZpAkeMTal79AUG7gK3g7FZBFCZOaD2-daqon5kiLE7A8hSQVmeXU+VvIaj9pfFktlC5sijqFcK4U16oh3PVNuadf4Z11NDLE1U2Sp3yKQ5iUZH7FQesWci-4nxRi5B5Swfg-BSBLvxKWAB1ZkWJYI8L4R5RUAd0ZHzYInWCgoJQqAsDwCQchehanlPgzG8UPgMmNLSLQ2l-5n2jhHKWlx9SMLxB5HByUD7aX8k4M0yQoQ7W6ORFeagzGZmFBIG0L57LTysgWN694uwCBsZ42Qq8zF2kRMNIKWFGKl0UU3eupVyp2mmDAr03ACgCEytlXKISqCdG6L0Q6LASjXFuFhPse4x6ELZBEnxZdL6pmbA9MkBJalwjCX2HcKN2DCjRlJWR9D1a4wECTBsWYRwug9L+bo1BJIiM5PNO0tFzKBAboga4LDVm+DymyHyXMWKzPdBhQ8RQqQZHjg+Cc1M2YEjzjVTBUgBqaUBLYFgwpbh2OafeLMwUzp2naC9V4ujFRsN5GjPWD8wKCQuaeNgJEsrOA+OmUcYxdIMKZn2HgoYnQPA8u0RkfA4oV0KtoiFkEoUUladWJgXC0kwO4GjMsGR2hsEmqOVwcp5iMNjPcAU8xMXFmKPmPpXFZmMPRa8KqGYK60G+ZyYxAEIWBH+OIrk2q3YdMQNQeylkpYdhwoCCURQWp7NSllACxrqQIvfnfKySDoTcCAb+C0tw64CEpgOXCQKESfDZpOZOWJsE3HMVcakFIo0x2DZ9PaTt2DQMsBy5ivYLYgr2lKqEfgeCMD4j7ZyFFAi5O5AUAC0iKQRpDX4MNz5TCaroSEvpGpHhcTkLEsWiFkUuvhYCRwTh+VYTilSQ5jItALUuG86hG1oLe2kZO9MRyZ2Vz8pawtWUwlNRaicz5VdRyKhHeCRZE6cxrunbOwklByk9E5FGRkxBBGeoYKwYgpBCDIF-nFL2B8KRQWLICZhWpRy5NUGYDQVJuhjwpJkzdHI27dHgnaP1iAtgSB6EUNDJ8MMJLQ5cUygMQR8ByuFS1nJrXyVrS05DAJeIAWYC4vcHlfhLN4ESsaFjal2hgAaNGUT+TPgCCqaBozpmTiMGaB5uZBQCfkn1Mwt4ABEAAxNR-9uCzB8MIVTBYhblvE3smT3sVVqt+PJdou59zmJ0RSKzjwbMqW07p72n0PKXAgtIU1QJnD8Elv5kZzgsxBcycDOdy8YlqAsYQMAjIgoauyczPDEDGP-zGAaDkPhKxkRE7SalWm4TuZvbjS2YdjBxYgO4Pmf7K5dBIv8a6rAca4QrhkV2AFFT2ShTuOQ8htwZgi0FpN9xHjuCYKwVzDrTwQkJLKOMdoRm7PmQamk5n6MkpLcNC0FZY7fWbouMwqJsDKIqZ2lu03PjaO6dyNiV2WB7e0Y9Ri1hLt0V8zo14PhEuEgS4eVU8geUcGaME1EFnMXtAZNJ8bnJJrVJLU1rsqIAdcUZCCLEQOQfEjEz0qEqrSWMFrHZ5bWnybueW+NnWzM7Q+EpuF2gIWtBhbp6R4G696BuTxFnILrm9kfpYNQE7hIQASGB-5MzdokHZfNOTkrrSbqomQJpOQxPbMMFRBAd9v4XatXuBOYubcPTLd4o8FGFdX6hiaRmUsQZ5jVeZPQTcFJINdHY7QDIPooDQcnVooAA" style="text-decoration:none"> Room of Nothingness example </a> <br>
+<a href="index.html?KQZQqgwhCiIgtCCAlAkgBQCoAIIHkA5ANWmU2gBFsAxZPAWWyNTLAEEAZbACQE10CeTKhCZgAKGBTpM2XPkLFM8QEIA5gFMAdgBMNAJ2wAzVQFd9AGwCWAWwCGm7AAsALi4AOAZwBcAel82GjpWdgB0albuTgCeoQDGAPY2AUEhvgBaACxxAI6YngDWdkYA7DkAUgDqvhFRsREmKgBGaokWCYZNFnZxBarRCaYupk0aNqaeVnHObl5+vgDuS6EDQyMa8UmLdi5xTgD8AG4AvDpg9Atxalq8pgDiAAyq+jsa2A+hAJyqtg4akwAvN4ANgArE8VKthqNxpM4ocEhZTIF3qFQeJxKhsAArCYubALOxafGrbAuBLYSb4po9AoAGmwRJ02FGES0xgScQmVi0amwCXZNmiBI6Ok84nKeMpLjs+nxRk53N5-PZCycO2wWLsNkpdmiPL5GOsnhc2jJFKFlISCRcTgN2ARUw0GIINqdzgSC2wlsdcTeJtlLk85uw+g03QAHthVuI7MHSayeSywzs7cq9Bp3BZhQrDIEMZg7AU3nZsBn3MmNKnsDyMUzsBYNPirPjBvjPO0FtnQhi2FobU4DGWNJnK9Xa3XdA2mzXW0MHQZhR3PdnsBiMSoXqbUQAOcTUEfWZWrfSecNGFkaNkhyZaAplz1aHsAIQ0iRs9psHRLU6-YdD4Z2BGQQEi2TjYBohyLiK+jMlinh6j2lSDlokFDqSRiHtGgx5jyzKEroBgGuIuImhBcZWKuTT6PaJ6Mm42guFYAosrSIaWp41q2vavobLGU7Gqa7LkgS6r4li6pQTeeriIWBT2kmaH6MKCyiuIYaRvaCxgRBUHKTBOj7oetE4WeFgXgGcr2iJGlAfxzKNviagJKo7h2BMbwfAATOipHylhJ5mRejlMcqzmue5Z6oj54gtgA5MGenClWnjCiJjnYeYQXYOFKhuR50XohQj6MlOOiPupgERp+36lcyf7Oph4YmVl55lvoCQVg1dXerV2m2uRewGZqurRPZoEDVWQ3UVWA2kjKxbiNo2IJPqyq2m8TVHmowYJBe5YAZGOzMU+4gcDOdEflO4V+dOJI4d6eFkkWJZjve-YLOIpLlVocX4qhIEiUSdjZkCokalYwbOfaAr8SD0QAgpwbkhS6qwbF-nhsG4zTU2pqGCJt22RG439viwOg868XY6YQ3dcT1kUgqFiduD4mjbFWgmlWzJ7WSabyby4jcXe9pbcj1rOLKzIieVGPGIewacVL6OSmROg0UY5NTsT8vi1aOXWjLFK3RrVhaz1uv9tgAPG9gcSyiWTRtqV0Qi3yWPOrdIX2kpbtpnyxOZUtSUK81x6DFLUEMn7Y5zZHC0aDHoeqbBI0IcKxP-MHWfxoM4icRFBUfJk4hJUXUUlwXjaZmNBcUu+uYyl0zokVKW1aQKej6EYpgWBiytuZ4kxQRi1u2yGqf6XYzvzkS-vEW3ZG6xiusqJxphTp4Wh2O466VZGqgb1vO97+u6813v6+DCfu-rqAYB3HcsDCIQIAbvlUXorwkeSW875ZibOGYUwRPAO1giBee-NBhqFcLtC8Rg7CUXMG8W0GpSQeTtn-HsP9TBRzeNbTeqE-TD1lDmKshg+aIOQWGHBv87BSUIVoYh-wELTy0NVJswoZ4u3dnnPBBF8SywSHQvBRgnotnIqlEMoDwHMlQmoY6UlbQwLgT1HYTFhh6GDDw+cgVzyiMZBYQk0RkYC35BefR5kazslLOSGULNhTuASFSKwUkTGGI0BGdwb4hEUk8LTP0IFRgOwKqSR2jIbY7HMCDVcAS4gkM8L3Cw2AfGngFIY1O940Z23iUE5k9ZSTaRZpSQJI5mQhMim8b6-wDDKP8WUoIhiIk72GC8RxPUeSQRbDPVcGs7ALGEp6aWSsynD2af+ISPRmITB6mks8ek3j9XArEzKhgNBGCbhLQksFRkJNYYYnIpgpgFDiSOHqBVVmdWcXKTeLYrDZ1zKU-Z4zxC4NSd0dkTy8msJ6htMMuY3gpUojmJ6PzXm4MMK0mJHTwVJL7qkgwnEd7WBcMlLmKD+FQuie055iTDHiKnJIlKaUKQ9DtGhNZhsQY6KnKSM891zDUosMGO0sDRGGGcjSy875-7tDPIYZZuloI6D1PzDUQ8zyeGacYvUOi9gPPcWJTKlIZy8LJQqtChivxSW5nYYIq56y3jUI2eAV09A6FXOSHZYoqV7BcWaLlLLDEhKSP6U0+qQW9X-IkLQ4i9DEgmuBKa4FRVpWVZK-4EzXqp1tGqSiP4HIJCgr0t48yMlvMjhE0s0L2mrmce4PusobHBEOFYHQpgQY9VJF40wegCSyhsANESA4kWGOsMWNZ2VClZv-IAuMIEhV+3diq8qnjvG+P5P8iWjJ3DuA6lJPmCY3xVJVbvedya3hLtMgYzNeDtRUpKump8oRQj8yBUcqtfMrnTtPWe-szsdDCl9S4DqLLMrRo5HKJwNFYEuDvWSfQeJY0xB6k4AU-xmy2JKXRPQIMDTSr3cYHom0KG0uZGGTwziuZWCaJRe52ch0Ds-TmnFsThRIl6E4pFGTT2GwSA5Wm94zwaAKPw-kQwSNRLaVe9wTEPwmgAzWidcQhEBxnVkjj+IFjhgsAB+sG0QEiKQyDExZieT3j5mqdBkcHbsjHXR7TjLQIlIM2eypYTI6CPNIY3N5Her1JtUrREQwTrBi3IOAm6pbEmOMB1HUG6W42EQ+8lpZGOmlk4kiJiAp4AdAecSV4zI8JuPLZWuTSH7Cdr0HESGbnsBHJOYaulD0ct5YFDon1HQwyiZ5auvm3EQtZs1VJbUdhEbKkw33IMQbhXKRHd9ERa5IWPSJTolkNpyQ2EbMPAksmLH2xTExKS5aUpnvECAV9VZgsLbiEttxqDwOmD-cYVmvqAzElXEmS6eEZVqeMGClzMWubiukx0AoQne1As2b4g7JHZWmMOkBSBU44wBLDMl9kw6A6juU6F-8GzMKiYOzYoxKS6Kb27gtBDnitArWFIEJs9ofGdUbHVgqJPAEQTx6tb0I5Qp8lWD2PA-zEWk5LP+HkWGrAQ5ZMKOiiOOhBkMXpqRXrqL2jUEt+2Ao-TEi3CdEMoxi0sXngNqzkMnActSZ6JFu3ZeMQVyxV1KITQdV5EOWOYbteBD-MKWwG6oI6KxTLrQcvX3HWN2+N12Nao8iEmeG3YwOjCil56YMowGLrNDtbujG1vXVMjgVSR8fI-41nDlJsTW8HOOHr8qXs1qcGDULEOPg4E8quT-+svbxuqkmwcNr73GYWrkYk4bkcYmLTHrG3jvngdQRCdyq7QxfYgqf-KRnjKTOr8chtXs9pJReqblWScwtjVUuBpL0EMRJGQ6EOESGUmguNPp3h+aYx7q2R0LaeUwtfQ8JG5SP-Qmgu-kbuyvkWmmLxGZVdZkS6oc62gH+gOX+C24GXoRSh+SufE7y7QCQ94uYNqMBqE4iuWVaewRIjgPaeCy0tOowqBUwIQKSmBFuhi5UfWC860yqkMNsb4rCZCO+LWieTKTqiGGIwAlQbAAA0tAAQKQM8K8KiN8B9H-pRCkoSJ2qYBWEYP5lSh7m7hoIAGQE64khbw0h9E2AAAzOuAAIwYjmo9SPpLgyhWTrQUhqHYDSEqHiBeQYgC7RDZyi4KhcieBKHYAqqi46osGdAMbRA2E6HiDaT1oDIvQqBHw3zMjbx3z7zBEliWH1gdxhRLbhFAA" style="text-decoration:none"> Success-script example </a> </font> <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  </font>&gt; </div>>
+</body>
+</html>
